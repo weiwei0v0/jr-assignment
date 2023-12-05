@@ -1,0 +1,40 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 450px;
+    margin: 0 auto;
+}
+
+td {
+    text-align: left;
+}
+
+.inputStyle {
+    height: 25px;
+}
+
+input, textarea, select {
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #E2E1DE;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+/* Styling submit button and add hover */
+#submitBtn {
+    text-align: center;
+    background-color: #2A3340;
+    border: none;
+    color: white;
+}
+
+#submitBtn:hover {
+    background-color: #5F6D73;
+}
