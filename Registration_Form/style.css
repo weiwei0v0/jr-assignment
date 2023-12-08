@@ -1,40 +1,78 @@
 
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    color: #2A3340;
 }
 
-table {
-    width: 450px;
-    margin: 0 auto;
+form {
+    max-width: 550px;
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: #E2E1DE;
+    margin: 15px auto;
+    padding: 35px;
 }
 
-td {
-    text-align: left;
-}
-
-.inputStyle {
-    height: 25px;
+h2 {
+    margin: 0 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input, textarea, select {
+    box-sizing: border-box;
+}
+
+.textInput {
+    margin: 0 0 30px;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    height: auto;
     border-radius: 5px;
     border: solid 1px;
     border-color: #E2E1DE;
-}
-
-.fullWidth {
-    width: 100%;
+    color: #2A3340;
 }
 
 /* Styling submit button and add hover */
-#submitBtn {
+button {
     text-align: center;
     background-color: #2A3340;
+    border-radius: 5px;
     border: none;
+    color: white;
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #5F6D73;
+}
+
+#clearBtn {
+    width: 100%;
+    line-height: 28px;
+    border: solid 2px #2A3340;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#clearBtn:hover {
+    background-color: #2A3340;
     color: white;
 }
 
-#submitBtn:hover {
-    background-color: #5F6D73;
+#terms {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 550px) {
+    form {
+        width: 300px;
+    }
 }

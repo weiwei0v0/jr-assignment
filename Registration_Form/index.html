@@ -1,80 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <form action="">
-        <table>
-            <tr>
-                <th colspan="2"><h2>Registration Form</h2></th>
-            </tr>
-            <tr>
-                <td><label for="firstName">First Name</label></td>
-                <td><label for="lastName">Last Name</label></td>
-            </tr>
-            <tr >
-                <td><input type="text" name="firstName" class="inputStyle"></td>
-                <td><input type="text" name="lastName" class="inputStyle"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><label for="email">Email Address</label></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="email" id="email" name="email" class="inputStyle fullWidth"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password</label></td>
-                <td><label for="confirmPassword">Confirm Password</label></td>
-            </tr>
-            <tr>
-                <td><input type="password" name="password" class="inputStyle"></td>
-                <td><input type="password" name="confirmPassword" class="inputStyle"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><label for="dob">Date of Birth</label></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="date" name="dob" id="dob" class="inputStyle fullWidth"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><label for="gender">Gender</label></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Other</label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2"><label for="aboutMe">About Me</label></td>
-            </tr>
-            <tr>
-                <td colspan="2"><textarea name="aboutMe" cols="30" rows="10" class="fullWidth"></textarea></td>
-            </tr>
-            <tr>
-                <td colspan="2"><label for="profession">Choose Your Profession</label></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <select id="profession" name="profession" class="inputStyle fullWidth">
-                        <option value="wb">Web Development</option>
-                        <option value="da">Data Analytics</option>
-                        <option value="uiux">UI/UX Design</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit" value="Submit" id="submitBtn" class="inputStyle fullWidth"></td>
-            </tr>
-        </table>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <form action="" method="post">
+            <h2>Registration Form</h2>
+
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" class="textInput" required />
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" class="textInput" />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="textInput" required />
+
+            <label for="password">Password</label>
+            <input type="password" name="password" class="textInput" required />
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" name="confirmPassword" class="textInput" required />
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" class="textInput" />
+
+            <label for="gender">Gender</label><br>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Other</label>
+            <br><br>
+
+            <label for="aboutMe">About Me</label>
+            <textarea name="aboutMe" class="textInput"></textarea>
+
+            <label for="profession">Choose Your Profession</label>
+            <select id="profession" name="profession" class="textInput">
+                <option value="wb">Web Development</option>
+                <option value="da">Data Analytics</option>
+                <option value="uiux">UI/UX Design</option>
+            </select>
+
+            <div>
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I'm accepting <a href="#">Terms and Conditions</a></label>
+            </div>
+
+            <button type="submit">Submit</button>
+            <input type="reset" value="Clear" id="clearBtn">
+        </form>
+    </body>
 </html>
