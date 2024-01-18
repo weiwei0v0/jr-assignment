@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+$line-border-color: #3498db;
+$line-bprder-empty: #e0e0e0;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f6fb;
+    font-family: "Muli", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // 可视区域高度
+    overflow: hidden;
+    margin: 0;
+
+    .container {
+        text-align: center;
+    }
+
+    .progress-container {
+        display: flex;
+        justify-content: space-between;
+        width: 350px;
+        max-width: 100%;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::before {
+            content: '';
+            background-color: $line-bprder-empty;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 4px;
+            width: 100%;
+            transition: 0.4s ease;
+            z-index: -1;
+        }
+    }
+
+    .progress {
+        background-color: $line-border-color;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 0%;
+        transition: 0.4s ease;
+        z-index: -1;
+    }
+
+    .circle {
+        background-color: #fff;
+        color: #999;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid $line-bprder-empty;
+        transition: 0.4s ease;
+
+        // 让文字上下左右居中
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.active {
+            border-color: $line-border-color;
+        }
+    }
+
+    .btn {
+        background-color: $line-border-color;
+        color: #fff;
+        border: 0;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 8px 30px;
+        margin: 5px;
+        font-size: 14px;
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: $line-bprder-empty;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
